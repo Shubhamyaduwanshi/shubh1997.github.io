@@ -23,11 +23,45 @@ body, html {height: 100%}
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  top: 100%;
+  top:
+  100%;
   left: 50%;
   margin-left: -60px;
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+.ptyping {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: rgba(255,255,255,.70);
+  margin: 0 auto;
+}
+
+/* Animation */
+.ptyping {
+  animation: animated-text 4s steps(22,end) 1s 1 normal both,
+             animated-cursor 600ms steps(22,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
 }
